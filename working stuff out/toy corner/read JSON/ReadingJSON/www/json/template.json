@@ -1,0 +1,34 @@
+     [
+        {
+         "Project_Name" : "template 1",
+         "Project_Attributes" : 
+            [
+             "subject 1",
+             "subject 2",
+             "subject 3"
+            ],
+        "Project_Type" : "10"
+        },
+         
+       {
+         "Project_Name" : "Alices computing confidence template",
+         "Project_Attributes" : 
+            [
+             "Information Systems",
+             "Computer System Fundamentals",
+             "Computing",
+                "Programming"
+            ],
+        "Project_Type" : "10"
+       },
+      {
+        "Project_Name" : "testTemplate",
+         "Project_Attributes" : 
+            [
+             "attribute 1",
+             "attribute 2",
+             "attribute 3"
+            ],
+        "Project_Type" : "3"
+      }
+     ]

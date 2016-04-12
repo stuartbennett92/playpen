@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/coops/Documents/projects/RIM/src/investigations/CordovaTest/passapp/PassApp/www/scripts/chat/chat.module.js",
+        "/Users/coops/Documents/projects/RIM/src/investigations/CordovaTest/passapp/PassApp/www/scripts/chat/detail/detail.controller.js"
+    ]
+}

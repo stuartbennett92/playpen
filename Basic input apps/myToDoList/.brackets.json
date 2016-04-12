@@ -1,0 +1,11 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/stuart/playpen/Basic input apps/myToDoList/platforms/android/platform_www/plugins/cordova-plugin-whitelist/whitelist.js",
+        "/Users/stuart/playpen/Basic input apps/myToDoList/platforms/android/platform_www/plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+        "/Users/stuart/playpen/Basic input apps/myToDoList/platforms/android/build/intermediates/assets/debug/www/js/controllers.js",
+        "/Users/stuart/playpen/Basic input apps/myToDoList/platforms/android/assets/www/plugins/ionic-plugin-keyboard/www/android/keyboard.js",
+        "/Users/stuart/playpen/Basic input apps/myToDoList/platforms/ios/cordova/lib/clean.js",
+        "/Users/stuart/playpen/Basic input apps/myToDoList/www/lib/ionic/js/ionic.min.js",
+        "/Users/stuart/playpen/Basic input apps/myToDoList/platforms/ios/cordova/lib/run.js"
+    ]
+}

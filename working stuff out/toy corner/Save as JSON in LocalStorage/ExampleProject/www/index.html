@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+  </head>
+  <body ng-app="starter">
+
+    <ion-pane>
+      <ion-header-bar class="bar-stable bar-calm" alight="centre">
+        <h1 class="title">Create and View Objects :^)</h1>
+      </ion-header-bar>
+      <ion-content ng-controller="ExampleController"> 
+            <div>
+                <h2>Object Creator</h2>
+                <label class="item">Object Name
+                <input ng-model="myObject.name" placeholder="obj name 1">
+                </label>
+                
+                <label class="item item-input item-select" >
+                    <div class="input-label">
+                        Object type
+                    </div>
+                    <select ng-model="myObject.type">
+                        <option>A</option>
+                        <option>B</option>
+                        <option>C</option>
+                    </select>
+                    </label>
+                    
+            </div>
+            <div>
+                <button class="button button-block button-positive" ng-click="addData(myObject)">
+                        Add Item
+                </button>
+            </div>
+          <hr />
+          <h2> Object list </h2>
+          
+          <div>
+                <ion-list>
+                    <!-- pass this clicked item into a modal popup thingy,
+                     pass in 'd' and allow the user to edit d, then overwrite it in data-->
+                    <ion-item ng-repeat="d in data" ng-click="editData(d)">
+                        {{d.name}}
+                        <p>type: {{d.type}}
+                            <button style="float: right;" ng-click="removeData(d)">delete</button>
+                    </ion-item>
+                </ion-list>
+          </div>
+          
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

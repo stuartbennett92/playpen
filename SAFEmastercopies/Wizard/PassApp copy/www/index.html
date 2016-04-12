@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+
+      
+    
+      
+      
+      
+      
+    <!-- wizard dependencies --->
+      
+      
+        <!-- ui-thumbnail - for converting pesky big bitmaps into nice little ones -->
+    <script src="lib/angular-thumbnail/angular-thumbnail.js"></script>
+      
+    <!-- lodash, for utilities -->
+    <script src="lib/external/js/lodash.min.js"></script>
+
+    <!-- date.format, for utilities -->
+    <script src="lib/external/js/date.format.js"></script>
+
+    <!-- cordova, for more utils -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>      
+      
+      
+      
+      
+      
+      <script src="scripts/isambard/isambard.js"></script>
+    <script src="scripts/common/common.module.js"></script>  
+    <script src="scripts/wizard/wizard.module.js"></script>
+      
+    <script src="scripts/common/services/lodash-service.js"></script>  
+    <script src="scripts/common/controllers/controllers.js"></script>
+    <script src="scripts/common/services/parameter-passer.service.js"></script> 
+    <script src="scripts/common/services/historyExtras.js"></script>  
+      
+      
+    <script src="scripts/locations/locations.module.js"></script>  
+    <script src="scripts/locations/locations.service.js"></script>  
+    <script src="scripts/locations/locations.search.service.js"></script>
+      
+    <script src="scripts/tocs/tocs.module.js"></script>  
+    <script src="scripts/tocs/tocs.service.js"></script>  
+    <script src="scripts/tocs/tocs.search.service.js"></script>  
+
+    <script src="scripts/trains/trains.module.js"></script>  
+    <script src="scripts/trains/trains.service.js"></script>  
+    <script src="scripts/trains/trains.search.service.js"></script>  
+
+    <script src="scripts/journey/journey.module.js"></script>  
+    <script src="scripts/journey/journey.service.js"></script>  
+    <script src="scripts/journey/journey.display.service.js"></script>        
+      
+      
+    <script src="scripts/wizard/train/wizard.train.module.js"></script>        
+    <script src="scripts/wizard/train/where-are-you/where-are-you.module.js"></script>  
+    <script src="scripts/wizard/train/where-are-you/start/start-controller.js"></script>
+    <script src="scripts/wizard/train/where-are-you/choose-a-station/choose-a-station.controller.js"></script>
+    <script src="scripts/wizard/train/where-are-you/choose-train/choose-train.controller.js"></script>
+    <script src="scripts/wizard/train/where-are-you/confirm-journey/confirm-journey.controller.js"></script>
+    <script src="scripts/wizard/train/where-are-you/summary/summary.controller.js"></script>      
+    
+      
+      
+        <!-- your app's js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/tabs/tabs.module.js"></script>  
+    <script src="scripts/account/account.module.js"></script>
+    <script src="scripts/account/settings/settings.controller.js"></script>
+    <script src="scripts/chat/chat.module.js"></script>
+    <script src="scripts/chat/chat.service.js"></script>
+    <script src="scripts/chat/detail/detail.controller.js"></script>
+    <script src="scripts/chat/list/list.controller.js"></script>
+    <script src="scripts/dash/dash.module.js"></script>
+    <script src="scripts/dash/dash.controller.js"></script>    
+      
+      
+      
+  </head>
+  <body ng-app="starter">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

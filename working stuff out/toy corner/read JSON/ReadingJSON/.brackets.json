@@ -1,0 +1,9 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/stuart/playpen/working stuff out/read JSON/ReadingJSON/platforms/ios/cordova/lib/versions.js",
+        "/Users/stuart/playpen/working stuff out/read JSON/ReadingJSON/platforms/android/cordova/Api.js",
+        "/Users/stuart/playpen/working stuff out/read JSON/ReadingJSON/www/js/app.js",
+        "/Users/stuart/playpen/working stuff out/read JSON/ReadingJSON/platforms/ios/CordovaLib/cordova.js",
+        "/Users/stuart/playpen/working stuff out/read JSON/ReadingJSON/platforms/ios/platform_www/cordova-js-src/exec.js"
+    ]
+}

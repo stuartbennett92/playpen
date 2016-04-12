@@ -1,0 +1,6 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/stuart/playpen/Basic input apps/basicApp/platforms/android/platform_www/plugins/cordova-plugin-whitelist/whitelist.js",
+        "/Users/stuart/playpen/Basic input apps/basicApp/platforms/android/platform_www/plugins/ionic-plugin-keyboard/www/android/keyboard.js"
+    ]
+}

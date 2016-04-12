@@ -1,0 +1,9 @@
+{
+    "jscodehints.detectedExclusions": [
+        "/Users/stuart/playpen/working stuff out/todo/todo/platforms/ios/CordovaLib/cordova.js",
+        "/Users/stuart/playpen/working stuff out/todo/todo/platforms/ios/platform_www/cordova-js-src/exec.js",
+        "/Users/stuart/playpen/working stuff out/todo/todo/platforms/ios/platform_www/cordova-js-src/platform.js",
+        "/Users/stuart/playpen/working stuff out/todo/todo/platforms/ios/platform_www/cordova.js",
+        "/Users/stuart/playpen/working stuff out/todo/todo/platforms/ios/www/cordova-js-src/exec.js"
+    ]
+}

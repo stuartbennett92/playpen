@@ -1,0 +1,35 @@
+<ion-view view-title="Profile Wizard">
+<ion-content has-header="true" padding="true">
+    <div class="row row-center">
+      <div class="col col-center">
+          <label class="item item-input">
+            <span class="input-label">Your Name</span>
+            <input type="text" ng-model="vm.profileModel.name"></input>
+          </label>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col col-center">
+          <label class="item item-input">
+            <span class="input-label">Your Site</span>
+            <input type="text" ng-model="vm.profileModel.site"></input>
+          </label>
+      </div>
+     </div>
+     <div class="row">
+      <div class="col col-center">
+          <label class="item item-input">
+            <span class="input-label">About you</span>
+            <textarea type="text" ng-model="vm.profileModel.about"></textarea>
+          </label>
+      </div>
+     </div>     
+    <div class="row">
+      <div class="col">
+        <button class="button button-block button-positive" ng-click="vm.confirm()">
+          Go to Login
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

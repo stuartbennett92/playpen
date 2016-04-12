@@ -1,0 +1,28 @@
+<ion-view view-title="TemplateWizard 1">
+<ion-content has-header="true" padding="true">
+    <label class="item item-input">
+        <span class="input-label">Template Name</span>
+        <input type="text" ng-model="vm.tTemplate.name"></input>
+    </label>
+    <hr />
+    <label class="item item-input">
+        <span class="input-label">Attribute</span>
+        <input type="text" ng-model="vm.newAtt.name"></input>
+    </label>
+    <button class="button button-energized" ng-click="vm.addAttribute(vm.newAtt)">+</button>
+    <div ng-hide="vm.tTemplate.attributes.length == 0">
+    <hr />List of Attributes
+    <ion-list>
+        <ion-item ng-repeat="attribute in vm.tTemplate.attributes">
+            {{attribute.name}}<div style="float: right;" ng-click="vm.removeAttribute(attribute)">&times</div>
+        </ion-item>
+    </ion-list>
+    </div>
+    <div class="bar bar-footer row">
+            <button class="button icon button-calm">Cancel
+            </button>
+            <button class="button icon button-calm" ng-disabled="(vm.tTemplate.name == '')||(vm.tTemplate.name == null)||(vm.tTemplate.attributes.length === 0)" ng-click="vm.next()">Next
+            </button>
+    </div>
+</ion-content>
+</ion-view>

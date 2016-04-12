@@ -1,0 +1,25 @@
+<ion-view view-title="Please confirm...">
+    <ion-content>
+        <div ng-show="vm.train == undefined">
+        <h3>You are currently standing on the platform at {{vm.location.locationName}}.</h3>
+        </div>
+        
+        <div ng-show="vm.train != undefined">
+        <h3>You are on the {{vm.train.toc.companyName}} service, to {{vm.train.destination.locationName}}, next stop: {{vm.nextStop.name}} at {{vm.nextStop.time}}. If that's right, press 'Done'.</h3>
+        </div>
+
+        
+    <div class="bar bar-footer row">
+        <div class="button-bar">
+            <button class="button button-calm button-block" ng-click="vm.onPrev()">Previous
+            </button>
+            <button class="button icon button-calm button-block" ng-disabled="!(vm.abort_state.length > 0)" ng-click="vm.onCancel()">Cancel
+            </button>
+            <button class="button icon button-calm button-block"  ng-show="vm.next.length > 0" ng-disabled="!(vm.next.length > 0)" ng-click="vm.onComplete()">Done
+            </button>
+        </div>
+    </div>        
+
+
+
+</ion-view>

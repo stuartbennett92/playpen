@@ -1,0 +1,68 @@
+<ion-view view-title="Trains for {{vm.location.locationName}}">
+    <ion-header-bar class="bar bar-subheader item-input-inset">
+        <label class="item-input-wrapper">
+            <i class="icon ion-search placeholder-icon"></i>
+            <input type="search" ng-model="vm.searchTerm" ng-change="vm.onSearchTermChange()" ng-model-options="{debounce: 500}" />
+            <div ng-show="vm.loading">
+                <ion-spinner />
+            </div>
+
+        </label>
+    </ion-header-bar>
+
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="train in vm.trains" ng-class="train.id == vm.selection.id ? 'calm-bg' : ''" ng-click="vm.setSelectedItem(train)">
+                <div class="row">
+                    <div class="col">
+                        <ui-thumbnail src="train.toc.logoImageUrl" opts="{height: 32}"></ui-thumbnail>
+                    </div>
+                    <div class="col">
+                        <h2>{{train.timeOfArrival}} service</h2>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <h2>From:</h2>
+                        <h4>{{train.origin.locationName}}</h4>
+                    </div>
+                    <div class="col">
+                        <h2>To:</h2>
+                        <h4>{{train.destination.locationName}}</h4>
+                    </div>
+                </div>
+
+
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+
+
+
+        
+
+    <div class="bar bar-subfooter bar-calm auto-height" ng-show="!(vm.unselected)">
+
+        <div class="row" >
+           <h3 class="title">{{vm.selection.timeOfArrival}} to {{vm.selection.destination.locationName}}</h3>
+        </div>
+    </div>    
+
+
+        <div class="bar bar-footer row">
+        <div class="button-bar">
+            <button class="button button-calm button-block" ng-click="vm.onPrev()">Previous
+            </button>
+            <button class="button icon button-calm button-block" ng-disabled="!(vm.abort_state.length > 0)" ng-click="vm.onCancel()">Cancel
+            </button>
+            <button class="button icon button-calm button-block"  ng-show="vm.next.length > 0" ng-disabled="vm.unselected" ng-click="vm.onNext()">Next
+            </button>
+        </div>
+    </div>
+    
+    
+    
+
+</ion-view>
