@@ -5,15 +5,22 @@
    <!-- list all created templates from 
    tRef list in template service -->
    
-   <div>
+   <div ng-show="vm.tListEmpty()">
        <label>
        You need to create a template, use the button below.
        </label>
    </div>
    
-    <a href="#/template/wizard" class="button button-float" >
-        <i class="icon ion-plus"></i>
-    </a>
+   <ion-list>
+       <ion-item ng-repeat="template in vm.listOfTemplates" class="row">
+           <ion-item class="item-borderless"><h1 style="color:orange;" class="icon ion-ios-flower-outline"></h1></ion-item>
+           <ion-item class="item-borderless card-borderless col col-center home" style="text-align: center;">{{template.name}}</ion-item>
+        </ion-item>
+    </ion-list>
    
+    <button class="button button-calm" ng-click="vm.startTemplateCreator();">
+       +
+    </button>
+      
 </ion-content>
 </ion-view>

@@ -7,35 +7,16 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', [
     'ionic', 
-    'app.tabs',
-    'app.dash', 
-    'app.chat',
-    'app.account',
     
-    
-    
-    // wizard dependencies
-    'ui.thumbnail',
-    'restlet.sdk',
-    'basicapp.wizard',
-    'basicapp.wizard.train',
-    'basicapp.wizard.train.where-are-you',
-    'basicapp.locations',
-    'basicapp.journey',
-    'basicapp.tocs',
-    'basicapp.trains',
-    'basicapp.common',
-    'ngCordova',
-    
-    'basicapp.template',
-    'basicapp.template.wizard'
+    'basicapp.template',    //template menu
+    'basicapp.templateCreator'
 ])
 
 
 .value('_', window._)
 .value('dateFormat', window.dateFormat)
 
-.run(function($ionicPlatform, $rootScope, isambard) {
+.run(function($ionicPlatform, $rootScope) {
 
     
         $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
@@ -60,7 +41,7 @@ angular.module('starter', [
         console.log(unfoundState, fromState, fromParams);
     });
     
-    
+     
     
     
     
@@ -78,12 +59,6 @@ angular.module('starter', [
       StatusBar.styleDefault();
     }
   });
-    
-    
-   isambard.configureHTTP_BASICAuthentication("", "");
-    
-    
-    
 })
 
 .config(function($stateProvider, $urlRouterProvider, $compileProvider, $sceDelegateProvider) {
@@ -96,6 +71,6 @@ angular.module('starter', [
     
 
     // if none of the above states are matched, use this as the fallback
-    $urlRouterProvider.otherwise('/tab/dash');
+    $urlRouterProvider.otherwise('template');
 
 });

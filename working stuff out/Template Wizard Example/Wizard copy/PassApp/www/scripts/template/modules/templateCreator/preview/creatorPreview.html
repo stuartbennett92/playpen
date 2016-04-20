@@ -1,0 +1,21 @@
+<!-- Creator -->
+<ion-view view-title="Creator: 5-Preview">
+<ion-content has-header="true" padding="true">
+    
+   <p> Name: {{vm.createdTemplate.name}}
+   
+   <p> Attributes:-
+   
+   <p ng-repeat="attribute in vm.createdTemplate.attributes"> 
+       <i class="icon ion-star" ng-hide="attribute.desc == ''"></i>
+       {{attribute.name}}
+   
+   <p> Style: {{vm.createdTemplate.style}}
+   
+   <div class="bar bar-footer row">
+       <button class="button icon button-calm" ng-click="vm.previous()">Previous</button>
+       <button class="button icon button-calm" ng-click="vm.finish()">Finish</button>
+   </div>
+   
+</ion-content>
+</ion-view>
