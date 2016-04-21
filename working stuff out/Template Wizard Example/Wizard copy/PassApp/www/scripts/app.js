@@ -10,7 +10,8 @@ angular.module('starter', [
     
     'basicapp.template',    //template menu
     'basicapp.templateCreator',
-    'basicapp.templateViewer'
+    'basicapp.templateViewer',
+    'basicapp.templateEditor'
 ])
 
 

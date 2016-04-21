@@ -25,6 +25,9 @@
         //CONTROLLER HERE
         
         vm.template = TemplateService.rtnSelected();
-             
+        
+        vm.startEditor = function () {
+            $state.go('editTemplateName');
+        }     
     }
 })();

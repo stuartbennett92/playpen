@@ -1,23 +1,45 @@
 <ion-view view-title="Template Viewer">
-<ion-content has-header="true" padding="true">
-    <ion-side-menus>
-        <ion-side-menu side="right">
-            Hi
-        </ion-side-menu>
-        <ion-side-menu-content>
-            <p> Name: {{vm.template.name}} <hr />
-        
-            <p> Attributes:-
-            <p>
-        
-            <i ng-repeat="attribute in vm.template.attributes"> 
-                <i class="icon ion-star" ng-hide="attribute.desc == ''"></i>
-                {{attribute.name}}
-            </i>
-            <hr /> 
-            <p> Style: {{vm.template.style}}                    
-        </ion-side-menu-content>
+    
+    <!-- below doesn't work -->
+    <ion-nav-buttons side="right">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+        </button>
+    </ion-nav-buttons>
+
+<ion-content>
+        <ion-side-menus  has-header="true" padding="true">
+            <ion-side-menu side="right">
+                <button class="button button-block button-stable" ng-click="vm.startEditor()">
+                    edit
+                </button>
+                <button class="button button-block button-stable">
+                    Share
+                </button>
+                <button class="button button-block button-assertive">
+                    Delete
+                </button>
+                
+                <div class="bar bar-footer">
+                    <div class="button-bar">
+                        <a class="button button-stable" menu-toggle="right"> Back </a>
+                    </div>*
+                </div>
+
+            </ion-side-menu>
+            
+            <ion-side-menu-content>
+                <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
+				</button>  
+                <h2> Template Viewer </h2> <hr />
+                <p> Name: {{vm.template.name}} <hr />
+            
+                <p> Attributes:-
+                <p ng-repeat="attribute in vm.template.attributes"> 
+                    <i class="icon ion-star" ng-hide="attribute.desc == ''"></i>
+                    {{attribute.name}}
+                <hr /> 
+                <p> Style: {{vm.template.style}} <hr />  
+        </ion-side-menu-content>          
     </ion-side-menus>
-        
 </ion-content>
 </ion-view>

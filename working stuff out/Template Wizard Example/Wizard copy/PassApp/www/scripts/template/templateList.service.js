@@ -109,6 +109,11 @@
             return (templateList.rtnTemplateByName(t));
         }
         
+        templateList.updateSelected = function (newTemplate) {
+            var index = templateList.indexOf(templateList.rtnSelected());
+            templateList.updateTemplate(index, newTemplate); 
+        }
+        
         return templateList;
     }
 })();
