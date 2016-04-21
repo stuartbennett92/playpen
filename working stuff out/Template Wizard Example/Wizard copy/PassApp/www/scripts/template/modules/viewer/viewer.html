@@ -1,0 +1,23 @@
+<ion-view view-title="Template Viewer">
+<ion-content has-header="true" padding="true">
+    <ion-side-menus>
+        <ion-side-menu side="right">
+            Hi
+        </ion-side-menu>
+        <ion-side-menu-content>
+            <p> Name: {{vm.template.name}} <hr />
+        
+            <p> Attributes:-
+            <p>
+        
+            <i ng-repeat="attribute in vm.template.attributes"> 
+                <i class="icon ion-star" ng-hide="attribute.desc == ''"></i>
+                {{attribute.name}}
+            </i>
+            <hr /> 
+            <p> Style: {{vm.template.style}}                    
+        </ion-side-menu-content>
+    </ion-side-menus>
+        
+</ion-content>
+</ion-view>

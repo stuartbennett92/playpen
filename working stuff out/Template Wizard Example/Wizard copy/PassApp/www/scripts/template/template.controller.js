@@ -23,14 +23,6 @@
         vm.listOfTemplates = TemplateService;
         //TemplateService.returnTemplate();
         
-        vm.startTemplateWizard = function() {
-            
-            $state.go('tWizname');
-            console.log("starting template wizard");
-            // when we start the wizard empty the template's template within the parameterPasser
-            parameterPasser.clear('paramTempTemplate');
-        }
-        
         vm.startTemplateCreator = function() {
             $state.go('createTemplateName');
         }
@@ -41,6 +33,11 @@
                 return true;
             }
             return false;
+        }
+        
+        vm.clickTemplate = function (template) {
+            TemplateService.select(template.name);
+            $state.go('templateViewer')
         }
     }
 })();

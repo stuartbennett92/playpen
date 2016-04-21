@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('basicapp.template')
+        .module('basicapp.templateCreator')
         .factory('TemplateCreatorSrvc', TemplateCreatorSrvc);
 
     TemplateCreatorSrvc.$inject = [
@@ -19,7 +19,6 @@
         
         // initialise obj
         creatorTemplate.reset = function() {
-            console.log("RESETTED")
             creatorTemplate.name = '';
             creatorTemplate.attributes = [];
             creatorTemplate.style = 10;

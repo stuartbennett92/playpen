@@ -9,7 +9,8 @@ angular.module('starter', [
     'ionic', 
     
     'basicapp.template',    //template menu
-    'basicapp.templateCreator'
+    'basicapp.templateCreator',
+    'basicapp.templateViewer'
 ])
 
 

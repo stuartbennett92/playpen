@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('basicapp.template')
+        .module('basicapp.templateCreator')
         .controller('createTemplateStyleCtrl', createTemplateStyleCtrl);
 
     createTemplateStyleCtrl.$inject = [

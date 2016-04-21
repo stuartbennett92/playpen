@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('basicapp.template')
+        .module('basicapp.templateCreator')
         .controller('createTemplateAttributeDescriptionsCtrl', createTemplateAttributeDescriptionsCtrl);
 
     createTemplateAttributeDescriptionsCtrl.$inject = [
@@ -31,7 +31,6 @@
         
         
         vm.descDone = function () {
-            console.log("firing DONE");
             vm.expandedAttribute = '';
             vm.descHistory = ''; 
         }
@@ -43,9 +42,7 @@
         
         vm.setExpand = function(attribute) {
             angular.copy(attribute.desc, vm.descHistory);
-            console.log("att name = " +attribute.name);
             vm.expandedAttribute = attribute.name;
-            console.log(vm.expandedAttribute);
         }
         
         vm.attributeExpand= function (attName) {

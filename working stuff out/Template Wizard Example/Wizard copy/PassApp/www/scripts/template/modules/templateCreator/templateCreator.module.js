@@ -8,8 +8,6 @@
 		])
 		.config(function($stateProvider) {
         
-            console.log("REGISTERING STATES FOR template WIZARD");
-            
             $stateProvider
             .state('createTemplateName', {
                 cache: false,

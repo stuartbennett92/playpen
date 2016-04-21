@@ -12,7 +12,7 @@
    </div>
    
    <ion-list>
-       <ion-item ng-repeat="template in vm.listOfTemplates" class="row">
+       <ion-item ng-repeat="template in vm.listOfTemplates" class="row" ng-click="vm.clickTemplate(template)"> <!-- when I click this I want to pass this template to the handler and  change state to 'templateViewer' -->
            <ion-item class="item-borderless"><h1 style="color:orange;" class="icon ion-ios-flower-outline"></h1></ion-item>
            <ion-item class="item-borderless card-borderless col col-center home" style="text-align: center;">{{template.name}}</ion-item>
         </ion-item>

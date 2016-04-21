@@ -5,29 +5,17 @@
         .module('basicapp.template')
         .factory('TemplateService', TemplateService);
 
-    TemplateService.$inject = [];
-    
-/*
-Service to :
-save objects into storage,
- remove/delete templates,
-  Get templates, 
-  set templates(overwrite)
-
-This service creates an object array; TemplateReferenceList, 
-and creates multiple template objects, that are also linked into the reference list.
-*/
-    
-    function TemplateService() {
+    TemplateService.$inject = [
+        'TemplateHandlerSrvc'
+    ];
+    function TemplateService(
+        TemplateHandlerSrvc
+    ){
         
         //template refence array
         var templateList = [];
         //t is my templateTemplate
-        var t = {};
-        t.name = "";
-        t.attributes = [];
-        t.style = "10";
-        t.creator = "";
+        var t = '';
         
         //Get or Create our tRef list in storage
         if (window.localStorage.getItem("templateList") === null) {
@@ -37,14 +25,6 @@ and creates multiple template objects, that are also linked into the reference l
         else {
             
             templateList = angular.fromJson(window.localStorage.getItem("templateList"));
-        }
-        
-        //clear template object
-        t.clear = function() {
-            t.name = "";
-            t.attributes = [];
-            t.style = "10";
-            t.creator = "";  
         }
         
         //Store: save in storage.
@@ -77,7 +57,22 @@ and creates multiple template objects, that are also linked into the reference l
         }
         
         //Read: specific template identified by name
-        
+        templateList.rtnTemplateByName = function(name){
+            var theTemplate = {};
+            
+            angular.forEach(templateList, function(template) {
+                
+                if (template.name == name){
+                    angular.copy(template, theTemplate);
+                    return theTemplate;
+                }
+            });
+            if (theTemplate == {}) {
+                console.log("no template with that name");                
+            } else {
+                return theTemplate;    
+            }
+        }
         //Update: set existing object in storage (overwrite) 
         templateList.updateTemplate = function(index, template) {
             
@@ -102,8 +97,16 @@ and creates multiple template objects, that are also linked into the reference l
             return templateList.length();
         }
         
-       templateList.isEmpty = function () {
+        templateList.isEmpty = function () {
             //if 
+        }
+        
+        templateList.select = function(name) {
+            t = name;   
+        }
+        
+        templateList.rtnSelected = function() {
+            return (templateList.rtnTemplateByName(t));
         }
         
         return templateList;
