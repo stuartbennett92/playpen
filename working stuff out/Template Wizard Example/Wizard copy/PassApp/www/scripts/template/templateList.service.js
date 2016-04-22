@@ -5,12 +5,8 @@
         .module('basicapp.template')
         .factory('TemplateService', TemplateService);
 
-    TemplateService.$inject = [
-        'TemplateHandlerSrvc'
-    ];
-    function TemplateService(
-        TemplateHandlerSrvc
-    ){
+    TemplateService.$inject = [];
+    function TemplateService(){
         
         //template refence array
         var templateList = [];
@@ -73,10 +69,30 @@
                 return theTemplate;    
             }
         }
+        
+        templateList.rtnIndexByName = function(name){
+            var index = -1;
+            var counter = 0;
+            
+            angular.forEach(templateList, function(template) {
+                
+                if (template.name == name){
+                    index = counter;
+                    return;
+                }
+                counter++;
+            });
+            if (index == -1) {
+                console.log("no template with that name");                
+            } else {
+                return index;    
+            }
+        }
+        
         //Update: set existing object in storage (overwrite) 
         templateList.updateTemplate = function(index, template) {
             
-            templateList[index] = template
+            angular.copy(template, templateList[index]);
             //save
             templateList.toStorage();
         }
@@ -110,7 +126,8 @@
         }
         
         templateList.updateSelected = function (newTemplate) {
-            var index = templateList.indexOf(templateList.rtnSelected());
+            var index = -1;
+            index = templateList.rtnIndexByName(t);
             templateList.updateTemplate(index, newTemplate); 
         }
         

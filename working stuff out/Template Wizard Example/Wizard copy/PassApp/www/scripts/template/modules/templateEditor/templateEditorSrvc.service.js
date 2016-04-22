@@ -17,12 +17,12 @@
         
         var editorTemplate = {}
         var tempTemplate = {};
-        angular.copy(TemplateService.rtnSelected(), tempTemplate);
-        console.log(TemplateService.rtnSelected);
         
         // initialise obj
         editorTemplate.reset = function() {
-            
+            tempTemplate = {};
+            angular.copy(TemplateService.rtnSelected(), tempTemplate);
+            console.log(tempTemplate);
         }
         
         // building template
@@ -42,6 +42,17 @@
         editorTemplate.cullAttribute = function (attributeName) {
             var index = tempTemplate.attributes.indexOf(attributeName);
             tempTemplate.attributes.splice(index, 1);
+        }
+        
+        editorTemplate.setStyle = function (style) {
+            tempTemplate.style = style;
+        }
+        editorTemplate.getStyle = function () {
+            return tempTemplate.style;
+        }
+        
+        editorTemplate.rtnTemplate = function () {
+            return tempTemplate;
         }
         
         /*

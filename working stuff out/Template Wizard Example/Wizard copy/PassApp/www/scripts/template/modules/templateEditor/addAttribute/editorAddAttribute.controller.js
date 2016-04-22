@@ -26,7 +26,7 @@
             vm.attribute = {'name': '', 'desc': ''};
         }
         vm.updateList = function () {
-            vm.attributeList = TemplateEditorSrvc.attributes;            
+            vm.attributeList = TemplateEditorSrvc.getAttributes();            
         }
                
         vm.addAttribute = function() {

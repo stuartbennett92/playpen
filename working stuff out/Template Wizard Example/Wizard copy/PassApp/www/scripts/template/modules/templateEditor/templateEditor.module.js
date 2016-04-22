@@ -9,6 +9,12 @@
 		.config(function($stateProvider) {
         
             $stateProvider
+            .state('editTemplateStart', {
+                cache: false,
+                url: '^/edit/name',
+                templateUrl: 'scripts/template/modules/templateEditor/start/editorStart.html',
+                controller: 'editTemplateStartCtrl as vm'
+            })
             .state('editTemplateName', {
                 cache: false,
                 url: '^/edit/name',

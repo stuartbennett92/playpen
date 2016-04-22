@@ -1,13 +1,6 @@
 <ion-view view-title="Template Viewer">
-    
-    <!-- below doesn't work -->
-    <ion-nav-buttons side="right">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="right">
-        </button>
-    </ion-nav-buttons>
-
 <ion-content>
-        <ion-side-menus  has-header="true" padding="true">
+        <ion-side-menus> <!--has-header="true" padding="true"> -->
             <ion-side-menu side="right">
                 <button class="button button-block button-stable" ng-click="vm.startEditor()">
                     edit
@@ -24,7 +17,6 @@
                         <a class="button button-stable" menu-toggle="right"> Back </a>
                     </div>*
                 </div>
-
             </ion-side-menu>
             
             <ion-side-menu-content>

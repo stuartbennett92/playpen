@@ -23,15 +23,15 @@
         });
         
         vm.updateStyle=  function() {
-            vm.chartStyle = TemplateEditorSrvc.style;   
+            vm.chartStyle = TemplateEditorSrvc.getStyle();   
         }
         
         vm.setStyle3 = function () {
-            TemplateEditorSrvc.style = 3;
+            TemplateEditorSrvc.setStyle(3);
             vm.updateStyle();
         }
         vm.setStyle10 = function () {
-            TemplateEditorSrvc.style = 10;
+            TemplateEditorSrvc.setStyle(10);
             vm.updateStyle();
         }
         

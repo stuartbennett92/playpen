@@ -22,9 +22,13 @@
             //nothing - just a template.
         });
         
-        vm.edittedTemplate = TemplateEditorSrvc;
-        
+        //angular.copy(TemplateEditorSrvc.rtnTemplate(), vm.edittedTemplate);
         //CONTROLLER HERE
+        vm.edittedTemplate = {};
+        vm.edittedTemplate.name = TemplateEditorSrvc.getName();
+        vm.edittedTemplate.attributes = TemplateEditorSrvc.getAttributes();
+        vm.edittedTemplate.style = TemplateEditorSrvc.getStyle(); 
+        
         vm.finish = function() {
             TemplateEditorSrvc.finish();
             TemplateEditorSrvc.reset();
