@@ -1,0 +1,31 @@
+<!-- Creator -->
+<ion-view view-title="Creator: 3-AttributeDescription">
+<ion-content has-header="true" padding="true">
+    
+    <label>Tap on an attribute to add a description</label>
+    <hr />
+    <ion-list>
+       <ion-item ng-repeat="attribute in vm.attributeList">
+           <div ng-click="vm.setExpand(attribute)">
+               <i class = "icon icon ion-star" ng-hide="attribute.desc === ''"></i> 
+               {{attribute.name}}
+           </div>
+           <ion-list ng-show="vm.attributeExpand(attribute.name)">
+               <ion-item>
+               <textarea align="centre" placeholder="Attribute description..." ng-model="attribute.desc"></textarea>
+               </ion-item>
+               <ion-item class="bar bar-footer row">
+                    <button class="button"  ng-click="vm.descCancel(attribute)"> cancel </button>
+                    <button class="button button-calm" ng-click="vm.descDone()"> okay </button>
+               </ion-item>
+           </ion-list>
+       </ion-item>
+    </ion-list>
+   
+    <div class="bar bar-footer row">
+        <button class="button icon button-calm" ng-click="vm.previous()">Previous</button>
+        <button class="button icon button-calm" ng-click="vm.next()"> Next </button>
+    </div>
+   
+</ion-content>
+</ion-view>

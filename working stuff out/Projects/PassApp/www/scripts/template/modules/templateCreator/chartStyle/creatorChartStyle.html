@@ -1,0 +1,27 @@
+<!-- Creator -->
+<ion-view view-title="Creator: 4-ChartStyle">
+<ion-content has-header="true" padding="true">
+    
+    <label style= "text-align: center;">
+        <p>Please select a chart style.</p> 
+        <p>The style limits attribute data values to either 3 OR 10.</p>
+    </label>
+    <hr />
+    <div class="row">
+        <div class="card col home" ng-click="vm.setStyle3()">
+            <h1 class = "icon ion-ios-flower-outline"> - 3</h1>
+            <h1 ng-show="vm.chartStyle == 3" style="float: right; color: green;" class = "icon ion-ios-checkmark"></h1>
+        </div>
+        <div class="card col home" ng-click="vm.setStyle10()">
+            <h1 class = "icon ion-ios-flower-outline"> - 10</h1>
+            <h1 ng-show="vm.chartStyle == 10" style="float: right; color: green;" class = "icon ion-ios-checkmark"></h1>
+        </div>
+    
+   
+   <div class="bar bar-footer row">
+       <button class="button icon button-calm" ng-click="vm.previous()">Previous</button>
+       <button class="button icon button-calm" ng-click="vm.next()"> Next </button>
+   </div>
+   
+</ion-content>
+</ion-view>

@@ -1,0 +1,26 @@
+<!-- Template Menu -->
+<ion-view view-title="Templates Menu">
+<ion-content has-header="true" padding="true">
+    
+   <!-- list all created templates from 
+   tRef list in template service -->
+   
+   <div ng-show="vm.tListEmpty()">
+       <label>
+       You need to create a template, use the button below.
+       </label>
+   </div>
+   
+   <ion-list>
+       <ion-item ng-repeat="template in vm.listOfTemplates" class="row" ng-click="vm.clickTemplate(template)"> <!-- when I click this I want to pass this template to the handler and  change state to 'templateViewer' -->
+           <ion-item class="item-borderless"><h1 style="color:orange;" class="icon ion-ios-flower-outline"></h1></ion-item>
+           <ion-item class="item-borderless card-borderless col col-center home" style="text-align: center;">{{template.name}}</ion-item>
+        </ion-item>
+    </ion-list>
+   
+    <button class="button button-calm" ng-click="vm.startTemplateCreator();">
+       +
+    </button>
+      
+</ion-content>
+</ion-view>
