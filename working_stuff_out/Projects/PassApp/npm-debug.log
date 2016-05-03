@@ -1,0 +1,55 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'angular-mocks#1.4.3' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.1
+4 verbose install initial load of /Users/stuart/playpen/working_stuff_out/Projects/PassApp/package.json
+5 warn package.json passapp@1.1.1 No repository field.
+6 warn package.json passapp@1.1.1 No README data
+7 warn package.json passapp@1.1.1 No license field.
+8 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/bower/package.json
+9 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/gulp/package.json
+10 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/gulp-concat/package.json
+11 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/gulp-minify-css/package.json
+12 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/gulp-rename/package.json
+13 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/gulp-sass/package.json
+14 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/gulp-util/package.json
+15 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/jasmine-core/package.json
+16 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/karma/package.json
+17 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/karma-chrome-launcher/package.json
+18 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/karma-jasmine/package.json
+19 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/karma-phantomjs-launcher/package.json
+20 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/phantomjs-prebuilt/package.json
+21 verbose installManyTop reading scoped package data from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/node_modules/shelljs/package.json
+22 info package.json gulp-minify-css@0.3.13 No license field.
+23 info package.json gulp-util@2.2.20 No license field.
+24 info package.json gulp-rename@1.2.2 No license field.
+25 info package.json shelljs@0.3.0 license should be a valid SPDX license expression
+26 verbose readDependencies loading dependencies from /Users/stuart/playpen/working_stuff_out/Projects/PassApp/package.json
+27 silly cache add args [ 'angular-mocks#1.4.3', null ]
+28 verbose cache add spec angular-mocks#1.4.3
+29 silly cache add parsed spec Result {
+29 silly cache add   raw: 'angular-mocks#1.4.3',
+29 silly cache add   scope: null,
+29 silly cache add   name: null,
+29 silly cache add   rawSpec: 'angular-mocks#1.4.3',
+29 silly cache add   spec: '/Users/stuart/playpen/working_stuff_out/Projects/PassApp/angular-mocks#1.4.3',
+29 silly cache add   type: 'local' }
+30 error addLocal Could not install /Users/stuart/playpen/working_stuff_out/Projects/PassApp/angular-mocks#1.4.3
+31 verbose stack Error: ENOENT: no such file or directory, open '/Users/stuart/playpen/working_stuff_out/Projects/PassApp/angular-mocks#1.4.3'
+31 verbose stack     at Error (native)
+32 verbose cwd /Users/stuart/playpen/working_stuff_out/Projects/PassApp
+33 error Darwin 15.3.0
+34 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "angular-mocks#1.4.3"
+35 error node v4.3.1
+36 error npm  v2.14.12
+37 error path /Users/stuart/playpen/working_stuff_out/Projects/PassApp/angular-mocks#1.4.3
+38 error code ENOENT
+39 error errno -2
+40 error syscall open
+41 error enoent ENOENT: no such file or directory, open '/Users/stuart/playpen/working_stuff_out/Projects/PassApp/angular-mocks#1.4.3'
+41 error enoent This is most likely not a problem with npm itself
+41 error enoent and is related to npm not being able to find a file.
+42 verbose exit [ -2, true ]

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+
+      
+    
+      
+      
+      
+      
+    <!-- wizard dependencies --->
+      
+      
+        <!-- ui-thumbnail - for converting pesky big bitmaps into nice little ones -->
+    <script src="lib/angular-thumbnail/angular-thumbnail.js"></script>
+      
+    <!-- lodash, for utilities -->
+    <script src="lib/external/js/lodash.min.js"></script>
+
+    <!-- date.format, for utilities -->
+    <script src="lib/external/js/date.format.js"></script>
+
+    <!-- cordova, for more utils -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script> 
+    
+    <!-- UUID -->
+    <script src="lib/node_modules/node-uuid/uuid.js"></script>
+    
+    <!-- Menu
+    <script src="scripts/menu/menu.module.js"></script>
+    -->
+         
+    
+    <!-- Template Menu -->
+    <script src="scripts/template/template.module.js"></script> 
+    <script src="scripts/template/templateList.service.js"></script>
+    <script src="scripts/template/template.controller.js"></script>
+    
+    <!-- Template Creator -->
+    <script src="scripts/template/modules/templateCreator/templateCreator.module.js"></script>
+    <script src="scripts/template/modules/templateCreator/templateCreatorSrvc.service.js"></script>
+    <script src="scripts/template/modules/templateCreator/name/creatorName.controller.js"></script>
+    <script src="scripts/template/modules/templateCreator/addAttribute/creatorAddAttribute.controller.js"></script>
+    <script src="scripts/template/modules/templateCreator/attributeDescription/creatorAttributeDescription.controller.js"></script>
+    <script src="scripts/template/modules/templateCreator/chartStyle/creatorChartStyle.controller.js"></script>
+    <script src="scripts/template/modules/templateCreator/preview/creatorPreview.controller.js"></script>
+    
+    <!-- Template Editor -->
+    <script src="scripts/template/modules/templateEditor/templateEditor.module.js"></script>
+    <script src="scripts/template/modules/templateEditor/templateEditorSrvc.service.js"></script>
+    <script src="scripts/template/modules/templateEditor/start/editorStart.controller.js"></script>
+    <script src="scripts/template/modules/templateEditor/name/editorName.controller.js"></script>
+    <script src="scripts/template/modules/templateEditor/addAttribute/editorAddAttribute.controller.js"></script>
+    <script src="scripts/template/modules/templateEditor/attributeDescription/editorAttributeDescription.controller.js"></script>
+    <script src="scripts/template/modules/templateEditor/chartStyle/editorChartStyle.controller.js"></script>
+    <script src="scripts/template/modules/templateEditor/preview/editorPreview.controller.js"></script>    
+    
+    <!-- Template Viewer -->
+    <script src="scripts/template/modules/viewer/viewer.module.js"></script>
+    <script src="scripts/template/modules/viewer/viewer.controller.js"></script>
+    
+    
+    <!-- Project Menu -->
+    <script src="scripts/project/project.module.js"></script>
+    <script src="scripts/project/projectList.service.js"></script>
+    <script src="scripts/project/project.controller.js"></script>
+    
+    <!-- Project Creator -->
+    <script src="scripts/project/modules/projectCreator/projectCreator.module.js"></script>
+    <script src="scripts/project/modules/projectCreator/projectCreator.service.js"></script>
+    <script src="scripts/project/modules/projectCreator/name/name.controller.js"></script>
+    <script src="scripts/project/modules/projectCreator/template/template.controller.js"></script>
+    <script src="scripts/project/modules/projectCreator/preview/preview.controller.js"></script>
+    
+    <!-- your app's js -->
+    <script src="scripts/app.js"></script>
+      
+  </head>
+  <body ng-app="starter">
+    <!--
+      The nav bar that will be updated as we navigate between views.
+    -->
+    <ion-nav-bar class="bar-calm">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+    </ion-nav-bar>
+    <!--
+      The views will be rendered in the <ion-nav-view> directive below
+      Templates are in the /templates folder (but you could also
+      have templates inline in this html file if you'd like).
+    -->
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html> 

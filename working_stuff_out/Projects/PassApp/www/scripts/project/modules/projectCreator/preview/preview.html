@@ -1,0 +1,28 @@
+<!-- Creator -->
+<ion-view view-title="(3) Project Creator: Preview">
+<ion-content has-header="true" padding="true">
+
+   <h1> Preview of your project</h1>
+   
+   <p>{{vm.project | json}}
+   </p> <hr />
+    <p>{{vm.project.name}}
+    </p>
+    
+    <p ng-repeat="attribute in vm.project.attributes">
+        {{attribute.name}} ||| {{attribute.desc}}
+    </p>
+    <p>{{vm.project.style}}
+    </p>
+    <p>{{vm.project.dataSets}}
+    </p>
+           
+   
+   
+   <div class="bar bar-footer row">
+       <button class="button icon button-calm" ng-click="vm.previous()"> Previous </button>
+       <button class="button icon button-calm" ng-click="vm.next()"> Finish </button>
+   </div>
+   
+</ion-content>
+</ion-view> 

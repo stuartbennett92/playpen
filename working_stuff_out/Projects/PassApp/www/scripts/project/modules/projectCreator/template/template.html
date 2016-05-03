@@ -1,0 +1,20 @@
+<!-- Creator -->
+<ion-view view-title="(2) Project Creator: Template">
+<ion-content has-header="true" padding="true">
+
+   <h1> list of templates </h1>
+   <label>Please select a template for your project :^)</label>
+   
+   <ion-list>
+       <ion-item ng-repeat="template in vm.templateList" ng-click="vm.templateList.select(template.name)"> 
+            {{template.name}} <i style="float: right; color: green;" class = "icon ion-ios-checkmark"  ng-show="vm.templateList.isSelected(template.name)"></i>
+       </ion-item>
+    </ion-list>
+   
+   <div class="bar bar-footer row">
+       <button class="button icon button-calm" ng-click="vm.previous()"> Previous </button>
+       <button class="button icon button-calm" ng-click="vm.next()"> Next </button>
+   </div>
+   
+</ion-content>
+</ion-view> 
