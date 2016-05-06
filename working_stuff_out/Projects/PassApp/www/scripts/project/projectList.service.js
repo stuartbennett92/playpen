@@ -3,10 +3,10 @@
 
     angular
         .module('basicapp.project')
-        .factory('ProjectService', ProjectService);
+        .factory('ProjectListService', ProjectListService);
 
-    ProjectService.$inject = [];
-    function ProjectService(){ 
+    ProjectListService.$inject = [];
+    function ProjectListService(){ 
         
         var projectList = [];
         var storage = 'projectListStorage';
@@ -81,7 +81,7 @@
             var guid = projectList.GenerateGUID();
             
             //Create in store
-            window.localStorage[guid] = angular.toJson(project);
+            window.localStorage.setItem(guid, angular.toJson(project));
             //Add to list
             projectList.push({'name': project.name, 'guid': guid});
             

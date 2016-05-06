@@ -5,8 +5,8 @@
         .module('basicapp.projectCreator')
         .factory('ProjectCreatorSrvc', ProjectCreatorSrvc);
         
-    ProjectCreatorSrvc.$inject = ['$state', 'ProjectService'];
-    function ProjectCreatorSrvc($state, ProjectService) {
+    ProjectCreatorSrvc.$inject = ['$state', 'ProjectListService'];
+    function ProjectCreatorSrvc($state, ProjectListService) {
         
         var service = {};
         
@@ -87,7 +87,7 @@
         service.finish = function () {
             var proj = {};
             angular.copy(project, proj);
-            ProjectService.Create(angular.copy(proj));
+            ProjectListService.Create(angular.copy(proj));
             service.Reset();
             $state.go('project');
         }

@@ -1,0 +1,86 @@
+<ion-view view-title="New Data Set">
+<ion-content>
+
+<label class="item item-input row">
+  <span class="input-label col-33">Date</span>
+  <input class="col"type="date" ng-model="vm.date">
+</label>
+
+    <label class="item row">
+        <span class="input-label col-33">
+             Time
+        </span>
+        <label class="item item-input item-select col" >
+                <select ng-model="vm.time.hh">
+                    <option selected>{{vm.time.hh}}</option>
+                    <option>00</option>
+                    <option>01</option>
+                    <option>02</option>
+                    <option>03</option>
+                    <option>04</option>
+                    <option>05</option>
+                    <option>06</option>
+                    <option>07</option>
+                    <option>08</option>
+                    <option>09</option>
+                    <option>10</option>
+                    <option>11</option>
+                    <option>12</option>
+                    <option>13</option>
+                    <option>14</option>
+                    <option>15</option>
+                    <option>16</option>
+                    <option>17</option>
+                    <option>18</option>
+                    <option>19</option>
+                    <option>20</option>
+                    <option>21</option>
+                    <option>22</option>
+                    <option>23</option>
+                </select>
+        </label>
+        
+        <label class="item item-input item-select col" >
+            :
+                <select ng-model="vm.time.mm">
+                    <option selected>{{vm.time.mm}}</option>
+                    <option >00</option>
+                    <option>05</option>
+                    <option>10</option>
+                    <option>15</option>
+                    <option>20</option>
+                    <option>25</option>
+                    <option>30</option>
+                    <option>50</option>
+                    <option>35</option>
+                    <option>40</option>
+                    <option>45</option>
+                    <option>55</option>
+                </select>
+        </label>
+    </label>
+<hr />
+<label> Set your data values </label>
+    <div class="list">
+        <div class="item range range-positive row" ng-repeat="data in vm.datas">
+            <div class="col col-25"><label class="item-text-wrap">{{data.attribute}}</label></div>
+            <input class ="col col" type="range" name="volume" min="0" max="{{vm.style}}" value="data.value" ng-model="data.value"> 
+            <div class="col col-10">{{data.value}}</div>
+        </div>
+    </div> 
+    
+    <hr />
+    <label>tag your data set</label>
+    <label class="item item-input">
+        <span class="input-label">data Tag</span>
+        <input type="text" ng-model="vm.tag">
+    </label>
+    
+
+    <div class="bar bar-footer">
+       <button class="button button-calm" ng-click="vm.wrapUp()">
+            Finish!
+        </button>
+    </div>
+</ion-content>
+</ion-view>

@@ -7,14 +7,16 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('starter', [
     'ionic', 
+    'ion-datetime-picker',
+    
     'basicapp.template',
     'basicapp.templateCreator',
     'basicapp.templateViewer',
     'basicapp.templateEditor',
     
-    
     'basicapp.project',
-    'basicapp.projectCreator'
+    'basicapp.projectCreator',
+    'basicapp.projectViewer'
 ])
 
 

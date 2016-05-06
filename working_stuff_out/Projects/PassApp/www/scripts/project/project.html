@@ -8,7 +8,7 @@
     </label>
     
     <ion-list>
-        <ion-item ng-repeat="project in vm.projectList">
+        <ion-item ng-repeat="project in vm.projectList" ng-click="vm.viewProject(project)">
             {{project.name}}
         </ion-item>
     </ion-list>
@@ -16,28 +16,7 @@
     <button class="button button-calm" style="align-items: center;" ng-click="vm.startProjectCreator();">
        +
     </button>
-    <div class="list">
-        <div class="item range range-positive row">
-            <div class="col col-25"><label class="item-text-wrap">Computer Science</label></div>
-            <input class ="col col" type="range" name="volume" min="0" max="10" value="0" ng-model="vm.value1"> 
-            <div class="col col-10">{{vm.value1}}</div>
-        </div>
-        <div class="item range range-positive row">
-            <div class="col col-25"><label class="item-text-wrap">Human Computer Interaction</label></div>
-            <input class ="col col" type="range" name="volume" min="0" max="10" value="0" ng-model="vm.value2"> 
-            <div class="col col-10">{{vm.value2}}</div>
-        </div>
-        <div class="item range range-positive row">
-            <div class="col col-25"><label class="item-text-wrap">Information Systems</label></div>
-            <input class ="col col" type="range" name="volume" min="0" max="10" value="0" ng-model="vm.value3"> 
-            <div class="col col-10">{{vm.value3}}</div>
-        </div>
-        <div class="item range range-positive row">
-            <div class="col col-25"><label class="item-text-wrap">Programming</label></div>
-            <input class ="col" type="range" name="volume" min="0" max="10" value="0" ng-model="vm.value4"> 
-            <div class="col col-10">{{vm.value4}}</div>
-        </div>
-    </div>
+
     
 </ion-content>
 </ion-view>

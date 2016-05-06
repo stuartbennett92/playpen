@@ -18,12 +18,18 @@ files: [
   '../www/lib/ionic/js/ionic.bundle.js',  
   //'../www/lib/angular/angular.js',
   '../www/lib/node_modules/node-uuid/uuid.js',
-  '../www/scripts/project/*.module.js',  
-  '../www/scripts/project/*.js',    
+
+  '../www/scripts/project/modules/projectViewer/*.module.js',  
+  '../www/scripts/project/modules/projectViewer/*.js',    
+
+  //'../www/scripts/project/*.module.js',  
+  //'../www/scripts/project/*.js',
+
   '../www/scripts/app.js',  
   '../bower_components/angular-mocks/angular-mocks.js',  
-  '**/project.tests.js' 
   
+  '**/projectViewer.tests.js'
+  //'**/projectList.tests.js'
 ],
 
 

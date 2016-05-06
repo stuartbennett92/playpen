@@ -1,0 +1,37 @@
+<ion-view view-title="Viewer">
+<ion-content>
+<!-- project viewer  2 tabs(viewer and data sets)-->
+<div class="button-bar">
+  <a class="button button-calm" ng-disabled="vm.isViewer" ng-click="vm.isViewer = true">Viewer</a>
+  <a class="button button-calm" ng-disabled="!vm.isViewer" ng-click="vm.isViewer = false">Data Sets</a>
+</div>
+    <div padding="false" ng-show="vm.isViewer">
+        {{vm.project}}
+        
+        
+    </div>
+    <div padding="false" ng-hide="vm.isViewer">
+        <ion-item ng-repeat="dataSet in vm.project.dataSets">
+            <div  class="row"">
+                <div class="col-50">
+                    {{dataSet.date | date:'MM/dd/yyyy  h:mma '}}
+                </div>
+                <div class="col-50">
+                    {{dataSet.tag}}
+                </div>
+            </div>
+        </ion-item>
+    </div>
+<div class="bar bar-footer">
+    <div padding="false" ng-show="vm.isViewer">
+        
+    </div>
+    <div padding="false" ng-hide="vm.isViewer">
+        <button class="button button-calm" ng-click="vm.addData()">
+            Add Data Set
+        </button>
+    </div>
+</div>
+</ion-content>
+</ion-view>
+
