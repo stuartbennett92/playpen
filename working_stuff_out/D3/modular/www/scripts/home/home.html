@@ -1,0 +1,19 @@
+<ion-view view-title="Wheels">
+<ion-content>
+	<ion-item class="row">
+		<div padding="false" class="col-25" text-align="center">
+			Data Set:
+		</div>
+		<div padding="false" class="col-75" text-align="center">
+			{{vm.project.dataSets[vm.index].date | date:'MM/dd/yyyy'}} -
+			{{vm.project.dataSets[vm.index].date | date:'hh:mm:ss'}} -
+			"{{vm.project.dataSets[vm.index].tag}}"
+		</div>
+	</ion-item>
+    <svgggg></svgggg>
+    
+    <div class="bar bar-footer">
+        <button ng-click="vm.drawThis()">button</button>
+    </div>
+</ion-content>
+</ion-view>
