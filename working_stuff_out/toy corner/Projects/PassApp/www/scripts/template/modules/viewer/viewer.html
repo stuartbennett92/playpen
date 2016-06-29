@@ -1,0 +1,47 @@
+<ion-view hide-nav-bar="true" view-title="Template Viewer">
+ 
+<ion-content>
+        <ion-side-menus> <!--has-header="true" padding="true"> -->
+            <ion-side-menu side="left">
+                <div class="bar bar-light">
+                    <h1 class="title">bar-light</h1>
+                </div>  
+                <ion-content class="has-header">
+                    <button class="button button-block button-stable" ng-click="vm.startEditor()">
+                        edit
+                    </button>
+                    <button class="button button-block button-stable">
+                        Share
+                    </button>
+                    <button class="button button-block button-assertive">
+                        Delete
+                    </button>
+                    
+                </ion-content>
+                    <div class="bar bar-footer">
+                        <div class="button-bar">
+                            <a class="button button-stable" menu-toggle="right"> Back </a>
+                        </div>
+                    </div>
+            </ion-side-menu>
+            
+            <ion-side-menu-content>
+                <div class="bar bar-light">
+                    <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+                    <h1 class="title">bar-light</h1>
+                </div>  
+                <ion-content class="has-header">
+                    <h2> Template Viewer </h2> <hr />
+                    <p> Name: {{vm.template.name}} <hr />
+                
+                    <p> Attributes:-
+                    <p ng-repeat="attribute in vm.template.attributes"> 
+                        <i class="icon ion-star" ng-hide="attribute.desc == ''"></i>
+                        {{attribute.name}}
+                    <hr /> 
+                    <p> Style: {{vm.template.style}} <hr /> 
+                </ion-content>
+        </ion-side-menu-content>          
+    </ion-side-menus>
+</ion-content>
+</ion-view>
